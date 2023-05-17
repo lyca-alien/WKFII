@@ -103,14 +103,85 @@
                                 </ul>
                                 <!--END of Nav tabs -->
                                 <!--START Tab panes -->
-                                <div class="tab-content">
+                                <div class="leftCol">
                                     <div class="tab-pane container active" id="main">
-                                        This is a Main tab.
+                                        <div class="properties col-2">
+                                            <input type="checkbox" id="lang1" name="lang1" value="Java">
+                                            <label for="lang1">Enacted</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="lang2" name="lang2" value="Python">
+                                            <label for="lang2">Repealed</label>
+                                            <button type="button" class="btnJob" disabled>Search Job</button>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="lang3" name="lang3" value="Go">
+                                            <label for="lang3">Amended</label>
+                                        </div>
+
+                                        <table class="tbl">
+                                            <tr>
+                                                <td class="td1"><label for="book">Book:</label> </td>
+                                                <td><select name="book" id="book">
+                                                    <option value="min">MIN</option>
+                                                    <option value="dunno">dunno</option>
+                                                    <option value="dunno">dunno</option>
+                                                    <option value="dunno">dunno</option>
+                                                    </select>
+                                                    
+                                                    <label for="silent">Silent:</label>
+                                                    <select name="silent" id="silent">
+                                                    <option value="N">N</option>
+                                                    <option value="dunno">dunno</option>
+                                                    <option value="dunno">dunno</option>
+                                                    <option value="dunno">dunno</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="td1"><label for="citAff">Citations Affected:</label> </td>
+                                                <td><textarea class="txtArea" id="citAff"></textarea></td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td><label for="userId">User Id:</label> </td>
+                                                <td><input for="userId" size="60"></input></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><label for="userId">Bill # / Regulatory Name:</label> </td>
+                                                <td><input for="userId" size="60"></input></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><label for="userId">Intro-Pop QA Date:</label> </td>
+                                                <td><input  type="date" for="userId" ></input>
+                                                <label for="analyst">Off-Shore Analyst:</label> 
+                                                <input for="userId" size="22"></input></td>
+                                            </tr>
+
+                                        </table>
+
+                                        <div class="bill">
+                                            
+                                            
+
+                                            
+                                        </div>
+
+                                        
+    
                                     </div>
                                     <div class="tab-pane container fade" id="innocmnts">
                                         This is a Innocomments tab.
                                     </div>
                                 </div>
+
+                                <div class="rightCol">
+                                    This is for Thesaurus
+                                </div>
+
                                 <!--END OF Tab panes -->
                             </div>
                         </div>
