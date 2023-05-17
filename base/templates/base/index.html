@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <!-- Remote style sheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Local style sheet relative to this file -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">FILE NAME HERE</a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <!-- <a class="nav-link active" aria-current="page" href="#">BUTTON TO ADD FUNCTION</a> -->
+            </li>
+            <li class="nav-item">
+            <!-- <a class="nav-link" href="#">Link</a> -->
+            </li>
+            <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+            </li> -->
+            <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+        </ul>
+        <form class="d-flex">
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <button class="btn btn-success" type="submit">SAVE WORK</button>
+        </form>
+        </div>
+    </div>
+    </nav>
+
+
+
+    <div class="float-container">
+
+        <div class="float-child" style="width: auto; height: auto;">
+          <div class="green">
+
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- CARD 1 -->
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#msg">Source File</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#pro">Text Version</a>
+                                </li>
+                            </ul>
+                            <!--END of Nav tabs -->
+                            <!--START Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane container active" id="msg">
+                                    <iframe src="{% static 'files/VA_HB_2029_2023-03-30.html' %}" width="1200px" height="400px"></iframe>    
+                                </div>
+                                <div class="tab-pane container fade" id="pro">
+                                    <iframe src="{% static 'files/VA_HB_2029_2023-03-30.html' %}" width="1200px" height="400px" id="fileViewer"></iframe>
+                                </div>
+                            </div>
+                            <!--END OF Tab panes -->
+                        </div>
+                        
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#main">Main</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#innocmnts">Inno Comments</a>
+                                    </li>
+                                </ul>
+                                <!--END of Nav tabs -->
+                                <!--START Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane container active" id="main">
+                                        This is a Main tab.
+                                    </div>
+                                    <div class="tab-pane container fade" id="innocmnts">
+                                        This is a Innocomments tab.
+                                    </div>
+                                </div>
+                                <!--END OF Tab panes -->
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- <div class="col-sm-4">
+                        <div class="card">
+                        
+                            <div class="card-body">
+                                <h5 class="card-title">Thesaurus</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </div> -->
+        
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="float-child" style="width: 500px;">
+        
+            <div class="card" style=" height: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">MicroService Output</h5>
+                    
+                    <ul id="myUL">
+                        <li><span class="caret">LOB -Lines of Business</span>
+                            <ul class="nested">
+                            <li>
+                                <input type="checkbox" id="Life1" name="Life1" value="Life">
+                                <label for="Life1">Life</label><br>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Health" name="Health" value="Health">
+                                <label for="Health">Health</label><br>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Personal_P&C" name="Personal_P&C" value="Personal P&C">
+                                <label for="Personal_P&C">Personal P&C</label><br>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Commercial_P&C" name="Commercial_P&C" value="Commercial P&C">
+                                <label for="Commercial_P">Commercial P&C</label><br>
+                            </li>  
+                            </ul>
+                        </li>
+                        <li><span class="caret">SLOBs -Sublines of Business</span>
+                            <ul class="nested">
+                            <li>
+                                <input type="checkbox" id="Life2" name="Life2" value="Life">
+                                <label for="Life2">Life</label><br>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Individual_Annuities" name="Individual_Annuities" value="Individual Annuities">
+                                <label for="Individual_Annuities">Individual Annuities</label><br>
+                            </li>
+                            </ul>
+                        </li>
+                        <li><span class="caret">Health</span>
+                            <ul class="nested">
+                            <li>
+                                <input type="checkbox" id="Individual_Accidents" name="Individual_Accident" value="Individual Accident">
+                                <label for="Individual_Accidents">Individual Accident</label><br>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Individual_Credit|_Accident_and_Health" name="Individual_Credit|_Accident_and_Health" value="Individual Accident">
+                                <label for="Individual_Credit|_Accident_and_Health">Individual Credit Accident and Health</label><br>
+                            </li>
+                            </ul>
+                        </li>
+                        <li><span class="caret">Personal P&C </span>
+                            <ul class="nested">
+                            <li>
+                                <input type="checkbox" id="Personal_Automobile_140" name="Personal_Automobile_140" value="Personal Automobile 140">
+                                <label for="Personal_Automobile_140">Personal Automobile 140</label><br>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Personal_Credit_260" name="Personal_Credit_260" value="Personal Credit 260">
+                                <label for="Personal_Credit_260">Personal Credit 260</label><br>
+                            </li>
+                            </ul>
+                        </li>
+                        <li><span class="caret">Commercial P&C</span>
+                            <ul class="nested">
+                            <li>
+                                <input type="checkbox" id="Commercial_Automobile_140" name="Commercial_Automobile_140" value="Commercial Automobile 140">
+                                <label for="Commercial_Automobile_140">Commercial Automobile 140</label><br>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Commercial_Boiler_and_Machinery_123" name="Commercial_Boiler_and_Machinery_123" value="Commercial Boiler and Machinery 123">
+                                <label for="Commercial_Boiler_and_Machinery_123">Commercial Boiler and Machinery 123</label><br>
+                            </li>
+                            </ul>
+                        </li>
+                        <li><span class="caret">SCC</span>
+                            <ul class="nested">
+                            <li>
+                                <input type="checkbox" id="SCC_Life" name="SCC_Life" value="Life">
+                                <label for="SCC_Life">SCC_Life</label><br>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="020_Life_insurance" name="020_Life_insurance" value="020 - Life insurance">
+                                <label for="020_Life_insurance">020 - Life insurance</label><br>
+                            </li>
+                            </ul>
+                        </li>
+                        <li><span class="caret">mostly on life topic</span>
+                            <ul class="nested">
+                            <li>
+                                <input type="checkbox" id="820_Trust_and_estates" name="820_Trust_and_estates" value="820 - Trust and estates">
+                                <label for="820_Trust_and_estates">820 - Trust and estates</label><br>
+                            </li>
+                            </ul>
+                        </li>
+                        <li><span class="caret">Health</span>
+                            <ul class="nested">
+                            <li>
+                                <input type="checkbox" id="060" name="060" value="060 - Health insurance / insurers">
+                                <label for="060">060 - Health insurance / insurers</label><br>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="065" name="065" value="065 - Health service corporations">
+                                <label for="065">065 - Health service corporations</label><br>
+                            </li>
+                            </ul>
+                           
+                        </li>
+                        <li><span class="caret"></span>
+                            <ul class="nested">
+                            <li>
+                                <input type="checkbox" id="" name="" value="">
+                                <label for=""></label><br>
+                            </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          
+        </div>
+        
+    </div>
+
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+        
+        for (i = 0; i < toggler.length; i++) {
+          toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+          });
+        }
+    </script>
+
+    <script>
+        // Function to convert HTML to plain text
+        function convertHtmlToText(html) {
+            var tempElement = document.createElement('div');
+            tempElement.innerHTML = html;
+            return tempElement.textContent || tempElement.innerText || '';
+        }
+    
+        // Fetch the HTML file
+        fetch('/static/files/VA_HB_2029_2023-03-30.html')
+            .then(response => response.text())
+            .then(html => {
+                // Convert HTML to plain text
+                var text = convertHtmlToText(html);
+                
+                // Create a new Blob with the text content
+                var blob = new Blob([text], {type: 'text/plain'});
+                
+                // Generate a data URL for the Blob
+                var textUrl = URL.createObjectURL(blob);
+                
+                // Set the src attribute of the iframe to the text URL
+                var iframe = document.getElementById('fileViewer');
+                iframe.src = textUrl;
+            });
+    </script>
+    
+    
+</body>
+
+</html>
