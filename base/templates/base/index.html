@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
+<html lang="en">
 
 <head>
     <!-- Remote style sheet -->
@@ -78,7 +78,7 @@
                                     <iframe src="{% static 'files/VA_HB_2029_2023-03-30.html' %}" width="1200px" height="400px"></iframe>    
                                 </div>
                                 <div class="tab-pane container fade" id="pro">
-                                    <iframe src="{% static 'files/VA_HB_2029_2023-03-30.html' %}" width="1200px" height="400px" id="fileViewer"></iframe>
+                                    <iframe src="{% static 'files/VA_HB_2029_2023-03-30.html' %}" id="fileViewer"></iframe>
                                 </div>
                             </div>
                             <!--END OF Tab panes -->
@@ -268,32 +268,45 @@
     </script>
 
     <script>
-        // Function to convert HTML to plain text
-        function convertHtmlToText(html) {
-            var tempElement = document.createElement('div');
-            tempElement.innerHTML = html;
-            return tempElement.textContent || tempElement.innerText || '';
-        }
-    
-        // Fetch the HTML file
-        fetch('/static/files/VA_HB_2029_2023-03-30.html')
-            .then(response => response.text())
-            .then(html => {
-                // Convert HTML to plain text
-                var text = convertHtmlToText(html);
-                
-                // Create a new Blob with the text content
-                var blob = new Blob([text], {type: 'text/plain'});
-                
-                // Generate a data URL for the Blob
-                var textUrl = URL.createObjectURL(blob);
-                
-                // Set the src attribute of the iframe to the text URL
-                var iframe = document.getElementById('fileViewer');
-                iframe.src = textUrl;
+        // Get the iframe element
+        var iframe = document.getElementById("fileViewer");
+
+        // Wait for the iframe to load
+        iframe.onload = function() {
+        // Get the iframe document
+        var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+        // Get the HTML content from the iframe document
+        var htmlContent = iframeDocument.documentElement.innerHTML;
+
+        // Convert the HTML content to plain text with correct indentation
+        var plainText = htmlToPlainText(htmlContent, true);
+
+        // Set the plain text as the content of the iframe document
+        iframeDocument.open();
+        iframeDocument.write("<pre style=' background-color: white; white-space: pre-wrap; word-wrap: break-word;' >" + plainText + "</pre>");
+        iframeDocument.close();
+        };
+
+        // Function to convert HTML to plain text with correct indentation
+        function htmlToPlainText(html, preserveIndentation) {
+        var tempElement = document.createElement("div");
+        tempElement.innerHTML = html;
+
+        // Adjust the indentation if needed
+        if (preserveIndentation) {
+            var lines = tempElement.innerText.split("\n");
+            var adjustedLines = lines.map(function(line) {
+            return line.trimLeft();
             });
+            tempElement.innerText = adjustedLines.join("\n");
+        }
+
+        return tempElement.innerText;
+        }
+
+
     </script>
-    
     
 </body>
 
