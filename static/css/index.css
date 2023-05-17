@@ -78,7 +78,7 @@ input[type=checkbox]{
 }
 
 .properties {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .btnJob{
@@ -106,10 +106,15 @@ input[type=checkbox]{
 .tbl {
   border-collapse: collapse;
   width: 80%;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .txtArea {
   width: 100%;
   height: 50px;
+}
+
+.txtA {
+  width: 100%;
+  height: 295px;
 }
