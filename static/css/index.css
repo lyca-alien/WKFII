@@ -65,3 +65,44 @@ ul,
 .active {
   display: block;
 }
+
+input[type=checkbox]{
+  accent-color:  #074168;
+}
+
+.properties {
+  margin-top: 30px;
+}
+
+.btnJob{
+  font-size: 16px;
+  border-radius: 8px;
+  margin-left: 90px;
+}
+
+.rightCol {
+  float: left;
+  width: 30%;
+  padding-left: 20px;
+  background-color: #c4dae9;
+}
+
+.leftCol {   
+  float: left;
+  width: 70%;
+}
+
+.bill {
+  margin-top: 30px;
+}
+
+.tbl {
+  border-collapse: collapse;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.txtArea {
+  width: 100%;
+  height: 50px;
+}
