@@ -8,6 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Local style sheet relative to this file -->
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.7.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -99,86 +103,83 @@
                                     </li>
                                     <li class="nav-item">
                                     <a class="nav-link" data-bs-toggle="tab" href="#innocmnts">Inno Comments</a>
+
                                     </li>
                                 </ul>
                                 <!--END of Nav tabs -->
                                 <!--START Tab panes -->
                                 <div class="leftCol">
-                                    <div class="tab-pane container active" id="main">
-                                        <div class="properties col-2">
-                                            <input type="checkbox" id="lang1" name="lang1" value="Java">
-                                            <label for="lang1">Enacted</label>
+                                    <div class="tab-content">
+                                        <div class="tab-pane container active" id="main">
+                                            <div class="properties col-2">
+                                                <input type="checkbox" id="lang1" name="lang1" value="Java">
+                                                <label for="lang1">Enacted</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="lang2" name="lang2" value="Python">
+                                                <label for="lang2">Repealed</label>
+                                                <button type="button" class="btnJob" disabled>Search Job</button>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="lang3" name="lang3" value="Go">
+                                                <label for="lang3">Amended</label>
+                                            </div>
+                                
+                                            <table class="tbl">
+                                                <tr>
+                                                    <td class="td1"><label for="book">Book:</label> </td>
+                                                    <td>
+                                                        <select name="book" id="book">
+                                                            <option value="min">MIN</option>
+                                                            <option value="dunno">dunno</option>
+                                                            <option value="dunno">dunno</option>
+                                                            <option value="dunno">dunno</option>
+                                                        </select>
+                                
+                                                        <label for="silent">Silent:</label>
+                                                        <select name="silent" id="silent">
+                                                            <option value="N">N</option>
+                                                            <option value="dunno">dunno</option>
+                                                            <option value="dunno">dunno</option>
+                                                            <option value="dunno">dunno</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                
+                                                <tr>
+                                                    <td class="td1"><label for="citAff">Citations Affected:</label> </td>
+                                                    <td><textarea class="txtArea" id="citAff"></textarea></td>
+                                                </tr>
+                                
+                                                <tr>
+                                                    <td><label for="userId">User Id:</label> </td>
+                                                    <td><input for="userId" size="60"></input></td>
+                                                </tr>
+                                
+                                                <tr>
+                                                    <td><label for="userId">Bill # / Regulatory Name:</label> </td>
+                                                    <td><input for="userId" size="60"></input></td>
+                                                </tr>
+                                
+                                                <tr>
+                                                    <td><label for="userId">Intro-Pop QA Date:</label> </td>
+                                                    <td>
+                                                        <input type="date" for="userId" ></input>
+                                                        <label for="analyst">Off-Shore Analyst:</label>
+                                                        <input for="userId" size="25"></input>
+                                                    </td>
+                                                </tr>
+                                            </table>
                                         </div>
-                                        <div>
-                                            <input type="checkbox" id="lang2" name="lang2" value="Python">
-                                            <label for="lang2">Repealed</label>
-                                            <button type="button" class="btnJob" disabled>Search Job</button>
+                                
+                                        <div class="tab-pane container" id="innocmnts">
+                                            <textarea class="txtA" width="100%" id="comment"></textarea>
                                         </div>
-                                        <div>
-                                            <input type="checkbox" id="lang3" name="lang3" value="Go">
-                                            <label for="lang3">Amended</label>
-                                        </div>
-
-                                        <table class="tbl">
-                                            <tr>
-                                                <td class="td1"><label for="book">Book:</label> </td>
-                                                <td><select name="book" id="book">
-                                                    <option value="min">MIN</option>
-                                                    <option value="dunno">dunno</option>
-                                                    <option value="dunno">dunno</option>
-                                                    <option value="dunno">dunno</option>
-                                                    </select>
-                                                    
-                                                    <label for="silent">Silent:</label>
-                                                    <select name="silent" id="silent">
-                                                    <option value="N">N</option>
-                                                    <option value="dunno">dunno</option>
-                                                    <option value="dunno">dunno</option>
-                                                    <option value="dunno">dunno</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="td1"><label for="citAff">Citations Affected:</label> </td>
-                                                <td><textarea class="txtArea" id="citAff"></textarea></td>
-                                            </tr>
-                                            
-                                            <tr>
-                                                <td><label for="userId">User Id:</label> </td>
-                                                <td><input for="userId" size="60"></input></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><label for="userId">Bill # / Regulatory Name:</label> </td>
-                                                <td><input for="userId" size="60"></input></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><label for="userId">Intro-Pop QA Date:</label> </td>
-                                                <td><input  type="date" for="userId" ></input>
-                                                <label for="analyst">Off-Shore Analyst:</label> 
-                                                <input for="userId" size="22"></input></td>
-                                            </tr>
-
-                                        </table>
-
-                                        <div class="bill">
-                                            
-                                            
-
-                                            
-                                        </div>
-
-                                        
-    
-                                    </div>
-                                    <div class="tab-pane container fade" id="innocmnts">
-                                        This is a Innocomments tab.
                                     </div>
                                 </div>
+                                
 
-                                <div class="rightCol">
+                                <div class="rightCol" >
                                     This is for Thesaurus
                                 </div>
 
